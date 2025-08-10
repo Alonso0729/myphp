@@ -21,3 +21,18 @@ function main($id) {
     $auth_key = "https://{$host}{$pathname}?auth_key={$t}-{$uuid}-{$uid}-{$p}";
     echo $auth_key;
 }
+
+// 调用 main 函数并传入 id 参数
+/**
+* 01浙江卫视
+* 02钱江都市
+* 03经济生活
+* 04影视科教
+* 06民生休闲
+* 07新闻频道
+* 08少儿频道
+* 10浙江国际
+* 11好易购
+* 12之江记录
+*/
+main("01");
