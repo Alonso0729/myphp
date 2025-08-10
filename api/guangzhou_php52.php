@@ -1,12 +1,12 @@
 <?php
 $id=$_GET['id'];
 $n = array(
-    "zhonghe" => 31,//广州综合
-    "xinwen" => 32,//广州新闻
+    "zhonghe" => 1375684745699328,//广州综合
+    "xinwen" => 1375684808818688,//广州新闻
     "jingsai" => 35,//广州竞赛
-    "yingshi" => 36,//广州影视
-    "fazhi" => 34,//广州法治
-    "shenghuo" => 33,//广州南国都市
+    "yingshi" => 1375684963975168,//广州影视
+    "fazhi" => 1375684882210816,//广州法治
+    "shenghuo" => 1375684847116288,//广州南国都市
     );
 $data = json_decode(file_get_contents("https://gzbn.gztv.com:7443/plus-cloud-manage-app/liveChannel/queryLiveChannelList?type=1"))->data;//id=31-36
 $count = count($data);
