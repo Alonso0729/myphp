@@ -35,4 +35,4 @@ function main($id) {
 * 11好易购
 * 12之江记录
 */
-main("01");
+main({$id});
