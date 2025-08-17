@@ -2,7 +2,8 @@
 date_default_timezone_set("Asia/Shanghai");
 $channel = empty($_GET['id']) ? "cctv16hd4k/15000000" : trim($_GET['id']);
 $array = explode("/", $channel);
-$stream = "http://180.97.247.27:8088/liveplay-kk.rtxapp.com/live/program/live/{$array[0]}/{$array[1]}/";
+$stream = "http://ts-gitv-hb-yh.189smarthome.com/live/program/live/{$array[0]}/{$array[1]}/";
+//$stream = "http://180.97.247.27:8088/liveplay-kk.rtxapp.com/live/program/live/{$array[0]}/{$array[1]}/";
 //$stream = "http://122d6f6388173cbc5240f6d0036bc5b7.v.smtcdns.net/sitv.mobilev51.live.bestvcdn.com.cn/001/live/program/live/{$array[0]}/{$array[1]}/";
 $timestamp = substr(time(), 0, 9) - 7;
 $current = "#EXTM3U" . "\r\n";
