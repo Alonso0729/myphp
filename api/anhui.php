@@ -35,8 +35,8 @@ function get_m3u8_url($id)
 }
 
 function get_m3u8_url_from_web($id) {
-	$u = "https://mapi.ahtv.cn/api/v1/channel_detail.php?channel_id="
-    //$u = "https://mapi.ahtv.cn/api/v1/channel.php?is_audio=0&category_id=1%2C2";
+	//$u = "https://mapi.ahtv.cn/api/v1/channel_detail.php?channel_id="
+    $u = "https://mapi.ahtv.cn/api/v1/channel.php?is_audio=0&category_id=1%2C2";
     $c = send_request($u, $ct);
     $j = json_decode($c);
     foreach ($j as $i) {
