@@ -2,9 +2,10 @@
 // TV频道代理脚本
 // 使用方法: your-domain.com/proxy.php?id=0 (或 1, 2)
 
-// 设置错误报告
+// 设置错误报告 - 生产环境建议关闭显示
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors', 0); // 改为0以隐藏错误信息
+ini_set('log_errors', 1); // 记录错误到日志而不是显示
 
 // 设置响应头
 header('Content-Type: text/html; charset=UTF-8');
@@ -134,8 +135,15 @@ if (strpos($content, '</body>') !== false) {
 // 输出内容
 echo $content;
 
-// 记录访问日志（可选）
-$log_entry = date('Y-m-d H:i:s') . " - ID: {$id} - IP: " . $_SERVER['REMOTE_ADDR'] . " - User-Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
-file_put_contents('access.log', $log_entry, FILE_APPEND | LOCK_EX);
+// 记录访问日志（可选） - 仅在可写环境中执行
+if (is_writable('.')) {
+    try {
+        $log_entry = date('Y-m-d H:i:s') . " - ID: {$id} - IP: " . $_SERVER['REMOTE_ADDR'] . " - User-Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+        file_put_contents('access.log', $log_entry, FILE_APPEND | LOCK_EX);
+    } catch (Exception $e) {
+        // 静默忽略日志写入错误
+        error_log("Log write failed: " . $e->getMessage());
+    }
+}
 
 ?>
