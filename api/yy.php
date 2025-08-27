@@ -1,151 +1,68 @@
 <?php
-error_reporting(0);
-$id = $_GET['id']??'1459243913';
-$url1 = "http://interface.yy.com/hls/get/stream/15013/xv_{$id}_{$id}_0_0_0/15013/xa_{$id}_{$id}_0_0_0?source=h5player&type=flv";
-$url2 = "http://interface.yy.com/hls/get/stream/15013/xv_{$id}_{$id}_0_0_0/15013/xa_{$id}_{$id}_0_0_0?source=h5player&type=m3u8";
-$url = [$url1,$url2][array_rand([$url1,$url2])];
-$p = json_decode(file_get_contents($url),1)['hls'];
-header("location:http://www.dsk.cc/p/tc.html?id=".$p);
-//print_r($p);
-/*
-http://interface.yy.com/hls/get/stream/15013/xv_1459243913_1459243913_0_0_0/15013/xa_1459243913_1459243913_0_0_0?source=h5player&type=m3u8
-http://interface.yy.com/hls/get/stream/15013/xv_1459243913_1459243913_0_0_0/15013/xa_1459243913_1459243913_0_0_0?source=h5player&type=flv
-澳门风云,http://www.dsk.cc/php/yy.php?id=1459243913
-白夜追凶第一季,http://www.dsk.cc/php/yy.php?id=1354932359
-变形金刚,http://www.dsk.cc/php/yy.php?id=1382736803
-超级英雄,http://www.dsk.cc/php/yy.php?id=1382736863
-超燃动作大片,http://www.dsk.cc/php/yy.php?id=1382749940
-超炫科幻大片,http://www.dsk.cc/php/yy.php?id=1382736840
-成龙系列,http://www.dsk.cc/php/yy.php?id=1354888751
-传奇英雄,http://www.dsk.cc/php/yy.php?id=1382735578
-闯关东,http://www.dsk.cc/php/yy.php?id=1354689861
-炊事班的故事,http://www.dsk.cc/php/yy.php?id=1382749901
-炊事班的故事II,http://www.dsk.cc/php/yy.php?id=1382736885
-打狗棍,http://www.dsk.cc/php/yy.php?id=39736069
-大汉天子,http://www.dsk.cc/php/yy.php?id=1382736810
-大汉天子2,http://www.dsk.cc/php/yy.php?id=1382736807
-大汉贤后卫子夫,http://www.dsk.cc/php/yy.php?id=1382735569
-大明王朝,http://www.dsk.cc/php/yy.php?id=1382736879
-大时代,http://www.dsk.cc/php/yy.php?id=1354930891
-大唐双龙传,http://www.dsk.cc/php/yy.php?id=1354930979
-盗暮笔记,http://www.dsk.cc/php/yy.php?id=1382702247
-地球上的地狱,http://www.dsk.cc/php/yy.php?id=1382736918
-地下交通站,http://www.dsk.cc/php/yy.php?id=1353428972
-第8号当铺,http://www.dsk.cc/php/yy.php?id=1382736905
-谍战片,http://www.dsk.cc/php/yy.php?id=1382736817
-法证先锋Ⅱ,http://www.dsk.cc/php/yy.php?id=1354888736
-法证先锋Ⅲ,http://www.dsk.cc/php/yy.php?id=1382736802
-封神榜,http://www.dsk.cc/php/yy.php?id=1356043643
-父母爱情,http://www.dsk.cc/php/yy.php?id=1354926650
-港片动作,http://www.dsk.cc/php/yy.php?id=1355480591
-港片女鬼,http://www.dsk.cc/php/yy.php?id=1461579859
-高分动作大片,http://www.dsk.cc/php/yy.php?id=1382736909
-宫心计,http://www.dsk.cc/php/yy.php?id=1354933540
-古惑仔,http://www.dsk.cc/php/yy.php?id=1458015189
-灌篮高手,http://www.dsk.cc/php/yy.php?id=1382735626
-国内动作大片,http://www.dsk.cc/php/yy.php?id=1382749917
-国内精彩战争片,http://www.dsk.cc/php/yy.php?id=1382745094
-国内科幻片,http://www.dsk.cc/php/yy.php?id=1354930821
-国内战争大片,http://www.dsk.cc/php/yy.php?id=1382749950
-国外高分大片,http://www.dsk.cc/php/yy.php?id=1382736867
-憨豆先生,http://www.dsk.cc/php/yy.php?id=1354930189
-河山,http://www.dsk.cc/php/yy.php?id=1382749952
-黑冰,http://www.dsk.cc/php/yy.php?id=1354932427
-红楼梦,http://www.dsk.cc/php/yy.php?id=1382745084
-洪金宝,http://www.dsk.cc/php/yy.php?id=1354924839
-花千骨,http://www.dsk.cc/php/yy.php?id=1354943110
-华子系列,http://www.dsk.cc/php/yy.php?id=1354888726
-欢乐集结号,http://www.dsk.cc/php/yy.php?id=1382735550
-欢乐集结号3,http://www.dsk.cc/php/yy.php?id=1382736822
-黄飞鸿,http://www.dsk.cc/php/yy.php?id=1354936181
-火蓝刀锋,http://www.dsk.cc/php/yy.php?id=1382737892
-鸡毛飞上天,http://www.dsk.cc/php/yy.php?id=1461033197
-纪晓岚,http://www.dsk.cc/php/yy.php?id=1382781415
-济公游记,http://www.dsk.cc/php/yy.php?id=1355265814
-家好月圆,http://www.dsk.cc/php/yy.php?id=1354888747
-解放：苏联战争巨片,http://www.dsk.cc/php/yy.php?id=1354936249
-今夜欢乐颂,http://www.dsk.cc/php/yy.php?id=1382735572
-金婚,http://www.dsk.cc/php/yy.php?id=1382736832
-金玉满堂,http://www.dsk.cc/php/yy.php?id=1382736881
-金装四大才子,http://www.dsk.cc/php/yy.php?id=1354926600
-经典二战,http://www.dsk.cc/php/yy.php?id=1354936238
-精彩港剧,http://www.dsk.cc/php/yy.php?id=1354932431
-举起手来,http://www.dsk.cc/php/yy.php?id=1382736877
-康熙王朝,http://www.dsk.cc/php/yy.php?id=1382736818
-抗战！抗战,http://www.dsk.cc/php/yy.php?id=1507704566
-科幻大片,http://www.dsk.cc/php/yy.php?id=1382745181
-恐怖鬼片,http://www.dsk.cc/php/yy.php?id=1355641195
-苦乐村官,http://www.dsk.cc/php/yy.php?id=1382736864
-狂飙,http://www.dsk.cc/php/yy.php?id=1355142167
-亮剑,http://www.dsk.cc/php/yy.php?id=1451866697
-聊斋志异S1,http://www.dsk.cc/php/yy.php?id=1382736975
-林正英①,http://www.dsk.cc/php/yy.php?id=1354932444
-林正英②,http://www.dsk.cc/php/yy.php?id=1453996620
-鹿鼎记,http://www.dsk.cc/php/yy.php?id=28265277
-鹿鼎记-周星驰版,http://www.dsk.cc/php/yy.php?id=1354658049
-魔幻手机,http://www.dsk.cc/php/yy.php?id=1382735544
-你最爱的宋小宝,http://www.dsk.cc/php/yy.php?id=1354936198
-叛逆者,http://www.dsk.cc/php/yy.php?id=1382736868
-平凡岁月,http://www.dsk.cc/php/yy.php?id=1382745117
-潜行极战,http://www.dsk.cc/php/yy.php?id=1354932420
-情满四合院,http://www.dsk.cc/php/yy.php?id=1382736888
-鹊刀门,http://www.dsk.cc/php/yy.php?id=1355344777
-热门喜剧,http://www.dsk.cc/php/yy.php?id=1354931495
-热血动作片,http://www.dsk.cc/php/yy.php?id=1382735627
-三国演义,http://www.dsk.cc/php/yy.php?id=13549362411
-上海滩,http://www.dsk.cc/php/yy.php?id=1382745184
-少年包青天,http://www.dsk.cc/php/yy.php?id=1356043677
-少年包青天第三部,http://www.dsk.cc/php/yy.php?id=1382736814
-射雕英雄传83版,http://www.dsk.cc/php/yy.php?id=1354210357
-神雕侠侣,http://www.dsk.cc/php/yy.php?id=1351762426
-神探狄仁杰1,http://www.dsk.cc/php/yy.php?id=1354930934
-神探狄仁杰2,http://www.dsk.cc/php/yy.php?id=1382828767
-神医喜来乐,http://www.dsk.cc/php/yy.php?id=1382714119
-生逢灿烂的日子,http://www.dsk.cc/php/yy.php?id=1382745085
-士兵突击,http://www.dsk.cc/php/yy.php?id=1382828766
-粟裕大将-影视,http://www.dsk.cc/php/yy.php?id=1354926542
-隋唐英雄传,http://www.dsk.cc/php/yy.php?id=1352475619
-谈判专家,http://www.dsk.cc/php/yy.php?id=1382735560
-特种兵归来,http://www.dsk.cc/php/yy.php?id=1382735581
-天道,http://www.dsk.cc/php/yy.php?id=1382735574
-天龙八部,http://www.dsk.cc/php/yy.php?id=1351814644
-天下第一,http://www.dsk.cc/php/yy.php?id=1382736838
-铁齿铜牙纪晓岚,http://www.dsk.cc/php/yy.php?id=1354143978
-外国电影合集,http://www.dsk.cc/php/yy.php?id=1354889019
-伪装者,http://www.dsk.cc/php/yy.php?id=1354936244
-我爱我家,http://www.dsk.cc/php/yy.php?id=1382735557
-我的父亲我的兵,http://www.dsk.cc/php/yy.php?id=1353413714
-无敌县令,http://www.dsk.cc/php/yy.php?id=1354932390
-五号特工组,http://www.dsk.cc/php/yy.php?id=1414967772
-武林外传,http://www.dsk.cc/php/yy.php?id=1355652820
-西游记,http://www.dsk.cc/php/yy.php?id=8953746
-西游记后传,http://www.dsk.cc/php/yy.php?id=1382736846
-仙剑奇侠传,http://www.dsk.cc/php/yy.php?id=1382749903
-香港动作大片,http://www.dsk.cc/php/yy.php?id=1382736816
-香港院线大片-最新,http://www.dsk.cc/php/yy.php?id=1354936242
-小鬼当家,http://www.dsk.cc/php/yy.php?id=1382745104
-笑傲江湖,http://www.dsk.cc/php/yy.php?id=1354936128
-心理追凶,http://www.dsk.cc/php/yy.php?id=1354936207
-新白娘子传奇,http://www.dsk.cc/php/yy.php?id=1354490667
-新世界,http://www.dsk.cc/php/yy.php?id=1382736850
-星爷经典,http://www.dsk.cc/php/yy.php?id=1382736808
-薛仁贵传奇,http://www.dsk.cc/php/yy.php?id=1355260662
-寻秦记,http://www.dsk.cc/php/yy.php?id=1382749900
-妖神记,http://www.dsk.cc/php/yy.php?id=1382745173
-野山鹰,http://www.dsk.cc/php/yy.php?id=1354932395
-英叔电影,http://www.dsk.cc/php/yy.php?id=1414858842
-雍正王朝,http://www.dsk.cc/php/yy.php?id=1356043620
-宰相刘罗锅,http://www.dsk.cc/php/yy.php?id=1353892468
-战火中的故事,http://www.dsk.cc/php/yy.php?id=1382735625
-战警系列电影,http://www.dsk.cc/php/yy.php?id=1382736893
-战狼,http://www.dsk.cc/php/yy.php?id=1354784966
-战争大片,http://www.dsk.cc/php/yy.php?id=1382736798
-赵本山,http://www.dsk.cc/php/yy.php?id=1382683959
-珍珠港-电影,http://www.dsk.cc/php/yy.php?id=1354936234
-正阳门下,http://www.dsk.cc/php/yy.php?id=1354931580
-忠烈杨家将,http://www.dsk.cc/php/yy.php?id=1382749909
-钟馗传说,http://www.dsk.cc/php/yy.php?id=1382736839
-周润发,http://www.dsk.cc/php/yy.php?id=1354888733
-周星驰,http://www.dsk.cc/php/yy.php?id=1382736808
-*/
-?>
+date_default_timezone_set("Asia/Shanghai");
+$firstrid = empty($_GET['id']) ? "17829" : trim($_GET['id']);
+$quality = "4";
+
+$checkUrl = "https://wap.yy.com/mobileweb/$firstrid";
+$header = array(
+    'Referer: https://wap.yy.com',
+    'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1'
+);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $checkUrl);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+$data = curl_exec($ch);
+curl_close($ch);
+
+function aes_decrypt($ciphertext, $key, $iv)
+{
+    return openssl_decrypt($ciphertext, 'AES-256-CBC', $key, 0, $iv);
+}
+
+$key = "abcdefghijklmnopqrstuvwxyz123456";
+$iv = "1234567890123456";
+$mediaurl = aes_decrypt("vcnTSiZsSUWtlZRxx+FuRnM7F1b1FlSVueFKcxewvKVbe9bXE49HXuq1dHha2K7cSic4yOuClWpau1RibQeO2g==", $key, $iv);
+
+$realdata = "";
+$rid = "";
+$reg = "/md5Hash[\s\S]*?sid.*'(.*)'.*?getQuery/i";
+preg_match($reg, $data, $realdata);
+if (count($realdata) > 0) {
+    $rid = $realdata[1];
+} else {
+    header('location:' . $mediaurl);
+    exit();
+}
+
+$millis_13 = round(microtime(true) * 1000);
+$millis_10 = time();
+$data = '{"head":{"seq":' . $millis_13 . ',"appidstr":"0","bidstr":"121","cidstr":"' . $rid . '","sidstr":"' . $rid . '","uid64":0,"client_type":108,"client_ver":"5.14.13","stream_sys_ver":1,"app":"yylive_web","playersdk_ver":"5.14.13","thundersdk_ver":"0","streamsdk_ver":"5.14.13"},"client_attribute":{"client":"web","model":"","cpu":"","graphics_card":"","os":"chrome","osversion":"106.0.0.0","vsdk_version":"","app_identify":"","app_version":"","business":"","width":"1536","height":"864","scale":"","client_type":8,"h265":0},"avp_parameter":{"version":1,"client_type":8,"service_type":0,"imsi":0,"send_time":' . $millis_10 . ',"line_seq":-1,"gear":' . $quality . ',"ssl":1,"stream_format":0}}';
+$url = "https://stream-manager.yy.com/v3/channel/streams?uid=0&cid=$rid&sid=$rid&appid=0&sequence=$millis_13&encode=json";
+$headers = array(
+    'Content-Type: text/plain;charset=UTF-8',
+    'Referer: https://www.yy.com/',
+    'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42'
+);
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+$result = curl_exec($ch);
+$result = json_decode($result, true);
+curl_close($ch);
+if (array_key_exists('avp_info_res', $result)) {
+    $a = $result['avp_info_res']['stream_line_addr'];
+    $mediaurl = array_values($a)[0]['cdn_info']['url'];
+    header('location:' . $mediaurl);
+    exit();
+} else {
+    header('location:' . $mediaurl);
+    exit();
+}
