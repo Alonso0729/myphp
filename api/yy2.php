@@ -1,4 +1,0 @@
-<?php
-($_GET['id']?? die('缺少必要的id参数')) && ($ch = curl_init('http://interface.yy.com/hls/new/get/'.$_GET['id'].'/'.$_GET['id'].'/1200?source=wapyy&callback=jsonp3')) && curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_SSL_VERIFYPEER => true, CURLOPT_SSL_VERIFYHOST => 2, CURLOPT_CAINFO => '/path/to/ca/certificate.pem', CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0", CURLOPT_REFERER => 'https://wap.yy.com/']) && ($data = curl_exec($ch) or die('cURL请求失败: '.curl_error($ch))) && preg_match('/hls":"(.*?)"/', $data, $result) && header('location: '.$result[1]) && exit;
-die('没有从返回数据中匹配到预期的hls相关内容');
-?>
