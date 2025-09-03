@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-//官网:https://jzb123.huajiaedu.com/tvs ---由不播不精彩特约赞助
+//官网 https://jzb123.huajiaedu.com/tvs ---由不播不精彩特约赞助
 $n = [
    //"cctv1" => 578, //CCTV1综合
    //"cctv2" => 485+94, //CCTV2财经
