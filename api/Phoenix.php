@@ -18,8 +18,8 @@ for($i=0;$i<4;$i++){
 $n = preg_split('/.flv/',basename($burl))[0];
 $hexTime = dechex(time());
 $hash = md5("obb9Lxyv5C/live/".$n.$hexTime);
-$playurl = 'http://tlive.fengshows.cn/live/'.$n.'.m3u8?txSecret='.$hash.'&txTime='.$hexTime;
-//$playurl = 'https://tlive.fengshows.com/live/'.$n.'.flv?txSecret='.$hash.'&txTime='.$hexTime;
+//$playurl = 'http://tlive.fengshows.cn/live/'.$n.'.m3u8?txSecret='.$hash.'&txTime='.$hexTime;
+$playurl = 'https://tlive.fengshows.com/live/'.$n.'.flv?txSecret='.$hash.'&txTime='.$hexTime;
 //$playurl = 'https://tlive.fengshows.com/live/'.$n.'.m3u8?txSecret='.$hash.'&txTime='.$hexTime;
 header('Location:'.$playurl);
 //echo $playurl;
