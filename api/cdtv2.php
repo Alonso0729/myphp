@@ -12,22 +12,22 @@
 	成华有线,cdtv2.php?id=chyx
 	崇州综合,cdtv2.php?id=cztv
 	都江堰电视台,cdtv2.php?id=djytv
-	大邑电视台,cdtv2.php?id=dytv
+	大邑综合,cdtv2.php?id=dytv
 	高新电视台,cdtv2.php?id=gxtv
-	锦江电视,cdtv2.php?id=jjtv
-	金牛区有线电视台,cdtv2.php?id=jntv
+	锦江电视台,cdtv2.php?id=jjtv
+	金牛电视台,cdtv2.php?id=jntv
 	金堂电视台,cdtv2.php?id=jttv
-	简阳市广播电视台,cdtv2.php?id=jyxwzh
-	郫都区广播电视台,cdtv2.php?id=pdxwzh
+	简阳新闻综合,cdtv2.php?id=jyxwzh
+	郫都新闻综合,cdtv2.php?id=pdxwzh
 	蒲江电视台,cdtv2.php?id=pjtv
-	彭州市广播电视台,cdtv2.php?id=pztv
-	青白江融媒体中心,cdtv2.php?id=qbjtv
-	双流区广播电视台,cdtv2.php?id=slzh
-	青羊区融媒体中心,cdtv2.php?id=qytv
+	彭州电视台,cdtv2.php?id=pztv
+	青白江电视台,cdtv2.php?id=qbjtv
+	双流综合,cdtv2.php?id=slzh
+	青羊电视台,cdtv2.php?id=qytv
 	武侯电视台,cdtv2.php?id=whtv
 	温江电视台,cdtv2.php?id=wjtv
-	新都区广播电视台,cdtv2.php?id=xdtv
-	新津县广播电视台,cdtv2.php?id=xjtv
+	新都综合,cdtv2.php?id=xdtv
+	新津电视台,cdtv2.php?id=xjtv
 	*/
 error_reporting(0);
 header('Content-Type: text/plain; charset=utf-8');
