@@ -1,9 +1,9 @@
 <?php
 
 /*
-盐城电视一套,yancheng.php?id=24
-盐城电视二套,yancheng.php?id=25
-盐城电视三套,yancheng.php?id=26
+盐城新闻综合,yancheng.php?id=24
+盐城法制生活,yancheng.php?id=25
+盐城公共,yancheng.php?id=26
 */
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
