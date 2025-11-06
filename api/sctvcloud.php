@@ -5,8 +5,8 @@ $n = [
 
     "my1" => "fjgcl.myxwcm.cn&9ff5a9b001971000b986a10c00000000", //绵阳新闻综合
     "my2" => "fjgcl.myxwcm.cn&9ff6671801971000c0df254f00000000", //绵阳科教生活
-    "my_jy1" => "jypull.jyxrmtzx.xyz&9dfe6ab1018e1000f4bb01a600000000", //绵阳江油新闻综合
-    "my_bc1" => "bcpull.bcrongmei.cn&63820f8101941000036a690c00000000", //绵阳北川综合
+//    "my_jy1" => "jypull.jyxrmtzx.xyz&9dfe6ab1018e1000f4bb01a600000000", //绵阳江油新闻综合
+//    "my_bc1" => "bcpull.bcrongmei.cn&63820f8101941000036a690c00000000", //绵阳北川综合
     "my_az1" => "azpull.myaztv.cn&2cd42a81018f10007b6e374500000000", //绵阳安州综合
     "my_yt1" => "ytpull.ytxrmt.cn&73957476019110000fa2d07e00000000", //绵阳盐亭综合
     "my_zt1" => "ztpull.ztrmfb.cn&b98e28f7019310006d65e1b500000000", //绵阳梓潼综合
@@ -25,7 +25,7 @@ $n = [
     "ls_gl1" => "glpull.glxrmtzx.cn&2a1603a1019410001fedc3cd00000000", //凉山甘洛综合
     "ls_mn1" => "mnpull.sichuanmianning.cn&1a5459a9019410003d361ee300000000", //凉山冕宁电视
 
-    "ga_ls1" => "pgpull.lspuge.cn&7414eab70192100000f07f6e00000000", //广安邻水综合
+//    "ga_ls1" => "pgpull.lspuge.cn&7414eab70192100000f07f6e00000000", //广安邻水综合
     "ga_ws1" => "wspull.wsxrmt.com.cn&fb899c55019310000893a7cd00000000", //广安武胜综合
 
     "ms1" => "mspull.scmstv.cn&ce36a16001931000ae80bca700000000", //眉山综合
