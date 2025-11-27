@@ -79,6 +79,12 @@ $channels = [
         'http://hlsbkmgsplive.miguvideo.com/wd_r1/2018/gesee/chcdzdy/600/01.m3u8?&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/wd_r1/2018/gesee/chcdzdy/600/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
     ],
+	'btws' => [ // 兵团卫视
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/btws/51/20250804/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/btws/51/20250804/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/btws/51/20250804/01.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/btws/51/20250804/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
     'cqws' => [ // 重庆卫视
         'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/chongqing/1000/index.m3u8?&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/chongqing/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
@@ -156,6 +162,12 @@ $channels = [
         'http://hlsbkmgsplive.miguvideo.com/envivo_v/2018/SD/jilin/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/envivo_v/2018/SD/jilin/1000/01.m3u8?&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/envivo_v/2018/SD/jilin/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+	'jxws' => [ // 江西卫视
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jxwshd/57/20190820/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jxwshd/57/20190820/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jxwshd/57/20190820/01.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jxwshd/57/20190820/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
     ],
     'lnws' => [ // 辽宁卫视
         'http://hlsbkmgsplive.miguvideo.com/wd_r2/ocn/liaoningwshd/3000/index.m3u8?&encrypt=',
