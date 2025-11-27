@@ -378,6 +378,12 @@ $channels = [
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/sxtyxx/51/20250804/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/sxtyxx/51/20250804/01.m3u8?&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/sxtyxx/51/20250804/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+	'hnwssj' => [ // 河南武术世界
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/01.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
     ]
 ];
 
