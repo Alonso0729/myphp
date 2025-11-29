@@ -97,6 +97,168 @@ $channels = [
         'http://hlsbkmgsplive.miguvideo.com/wd_r1/2018/gesee/chcdzdy/600/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/wd_r1/2018/gesee/chcdzdy/600/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
     ],
+    'ttmlh' => [ // 体坛名栏汇
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/titanminglan/51/20250514/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/titanminglan/51/20250514/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/titanminglan/51/20250514/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/titanminglan/51/20250514/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'mg24ty' => [ // 咪咕24小时体育台
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/tysy201903/75/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/tysy201903/75/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/tysy201903/75/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/tysy201903/75/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    '24csls' => [ // 24小时城市联赛轮播台
+        'http://hlsbkmgsplive.miguvideo.com/migu/lunbo/ouzhoubei/51/20240603/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/lunbo/ouzhoubei/51/20240603/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/lunbo/ouzhoubei/51/20240603/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/lunbo/ouzhoubei/51/20240603/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'sszjd' => [ // 赛事最经典
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/saishijingdian/51/20250514/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/saishijingdian/51/20250514/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/saishijingdian/51/20250514/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/saishijingdian/51/20250514/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'gdjys' => [ // 掼蛋精英赛
+        'http://hlsbkmgsplive.miguvideo.com/wd_r4/virtuallive/5101059662/150/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r4/virtuallive/5101059662/150/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r4/virtuallive/5101059662/150/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r4/virtuallive/5101059662/150/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'jdxgdy' => [ // 经典香港电影
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5100180869/150/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5100180869/150/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5100180869/150/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5100180869/150/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'kzjdy' => [ // 抗战经典影片
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100002089-150/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100002089-150/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100002089-150/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100002089-150/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xpfyt' => [ // 新片放映厅
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100030975-150/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100030975-150/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100030975-150/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd-virtuallive5100030975-150/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'hmxt' => [ // 和美乡途轮播台
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002411/51/20210706/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002411/51/20210706/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002411/51/20210706/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002411/51/20210706/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'gqdp' => [ // 高清大片
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/gaoqingdapian/51/20250514/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/gaoqingdapian/51/20250514/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/gaoqingdapian/51/20250514/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/gaoqingdapian/51/20250514/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd0' => [ // 熊猫频道0
+        'http://hlsbkmgsplive.miguvideo.com/ws_x/2018/xiongmao/HD/2000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/ws_x/2018/xiongmao/HD/2000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/ws_x/2018/xiongmao/HD/2000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/ws_x/2018/xiongmao/HD/2000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd1' => [ // 熊猫频道1
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao01/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao01/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao01/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao01/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd2' => [ // 熊猫频道2
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao02/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao02/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao02/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao02/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd3' => [ // 熊猫频道3
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao03/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao03/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao03/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao03/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd4' => [ // 熊猫频道4
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao04/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao04/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao04/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao04/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd5' => [ // 熊猫频道5
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao05/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao05/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao05/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao05/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd6' => [ // 熊猫频道6
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao06/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao06/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao06/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao06/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd7' => [ // 熊猫频道7
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao07/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao07/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao07/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao07/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd8' => [ // 熊猫频道8
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao08/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao08/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao08/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao08/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd9' => [ // 熊猫频道9
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao09/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao09/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao09/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao09/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xmpd10' => [ // 熊猫频道10
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao10/1000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao10/1000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao10/1000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao10/1000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'zqzy' => [ // 最强综艺趴
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/zuiqiangzongyi/51/20250514/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/zuiqiangzongyi/51/20250514/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/zuiqiangzongyi/51/20250514/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/zuiqiangzongyi/51/20250514/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'jddh' => [ // 经典动画大集合
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jingdiandonghua/51/20250514/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jingdiandonghua/51/20250514/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jingdiandonghua/51/20250514/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/jingdiandonghua/51/20250514/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xdll' => [ // 新动力量创一流
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002409/51/20210706/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002409/51/20210706/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002409/51/20210706/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/virtuallive2/5900002409/51/20210706/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'qtj' => [ // 钱塘江
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/cnr/qiantangjiang/2000/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/cnr/qiantangjiang/2000/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/cnr/qiantangjiang/2000/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/cnr/qiantangjiang/2000/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'zjl' => [ // 周杰伦现场
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/virtuallive/5100170828/75/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/virtuallive/5100170828/75/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/virtuallive/5100170828/75/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r3/virtuallive/5100170828/75/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'hyyt' => [ // 华语乐坛最强音
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5102010211/75/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5102010211/75/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5102010211/75/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/wd_r2/virtuallive/5102010211/75/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
 	'btws' => [ // 兵团卫视
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/btws/51/20250804/index.m3u8?&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/btws/51/20250804/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
