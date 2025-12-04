@@ -1,5 +1,5 @@
 <?php
-$id = $_GET['id'];//19814和19815
+$id = $_GET['id'];//吉安综合-19814和吉安公共-19815
     $tenantId = 'a33433adbbe5d17cacaa7fcc97556ebc';
     $apiUrl = "https://www.jarmt.cn/cmsback/api/article/getMyArticleDetail?tenantId={$tenantId}&articleId={$id}";
    
