@@ -1,150 +1,114 @@
 <?php
-$id = isset($_GET['channel']) ? $_GET['channel'] : '';
-if ($id) {
-    $id  = strtolower($id);
-
-    $ids = [
-        '深圳卫视' => 'AxeFRth',
-        '深圳少儿' => '1SIQj6s',
-        '深圳财经' => '3vlcoxP',
-        '深圳电视剧' => '4azbkoY',
-        '宜和购物' => 'BJ5u5k2',
-        '深圳都市' => 'ZwxzUXr',
-        '深圳国际' => 'sztvgjpd',
-        '深圳移动' => 'wDF6KJ3',
-        '深圳卫视4k' => 'R77mK1v'
-
-    ];
-    $key = "bf9b2cab35a9c38857b82aabf99874aa96b9ffbb";
-    $dectime = dechex(time()+7200);
-    $rate = "500";
-    $path = '/'.$ids[$id].'/'.$rate.'/'.pathname($ids[$id]).'.m3u8';
-
-    $sign = md5($key.$path.$dectime);
-    $liveURL = $path."?sign={$sign}&t={$dectime}";
-    $liveURL = $_SERVER['PHP_SELF'] . '?m3u8=' . rawurlencode($liveURL);
-
-    header('Access-Control-Allow-Origin: *');
-    header("Location: $liveURL");
-    die;
-}
-
-$m3u8 = isset($_GET['m3u8']) ? $_GET['m3u8'] : '';
-if ($m3u8) {
-    $c = get($m3u8);
-    $p = $_SERVER['PHP_SELF'] . '?ts=' . dirname($m3u8) . '/';
-    $c = preg_replace('/^(?=.+\.ts)/m', $p, $c);
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/vnd.apple.mpegurl');
-    echo $c;
-    die;
-}
 
 $ts = isset($_GET['ts']) ? $_GET['ts'] : '';
-if ($ts) {
-    $c = get($ts);
-    header('Access-Control-Allow-Origin: *');
+if (empty($ts)) {
+
+// IPTV 频道列表
+    $tv_list = [
+        'szws4k' => ['R77mK1v', '24725', '深圳卫视4K'],
+        'szws' => ['AxeFRth', '7867', '深圳卫视'],
+        'szds' => ['ZwxzUXr', '7868', '都市频道'],
+        'szdsj' => ['4azbkoY', '7880', '电视剧频道'],
+//        'szgg' => ['2q76Sw2', '7874', '公共频道'],
+        'szcj' => ['3vlcoxP', '7871', '财经频道'],
+        'szse' => ['1SIQj6s', '7881', '少儿频道'],
+        'szyd' => ['wDF6KJ3', '7869', '移动电视'],
+        'szyh' => ['BJ5u5k2', '7878', '宜和购物频道'],
+        'szgj' => ['sztvgjpd', '7944', '国际频道'],
+    ];
+// 处理 IPTV 请求
+    $id = isset($_GET['id']) ? $_GET['id'] : 'szds';
+    if (isset($tv_list[$id])) {
+        header("Access-Control-Allow-Origin: *");
+        header('Content-Type: application/vnd.apple.mpegurl');
+        echo get_m3u8_content($tv_list[$id][0], $tv_list[$id][1]);
+    } else {
+        header('Content-Type: application/json');
+        echo json_encode(['code' => 400, 'message' => 'Invalid request']);
+    }
+} else {
+    $data = curl_get($ts);
+    header("Access-Control-Allow-Origin: *");
     header('Content-Type: video/MP2T');
-    echo $c;
-    die;
+    echo $data;
 }
 
-
-
-function get($path) {
-    $url = 'https://sztv-hls.sztv.com.cn' . $path;
+// 通用 curl GET 请求
+function curl_get($url, $params = null) {
+    if ($params) $url .= '?' . http_build_query($params);
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
     curl_setopt($ch, CURLOPT_REFERER,'https://www.sztv.com.cn/');
-//    curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36');
+//    curl_setopt($ch, CURLOPT_REFERER,'https://www.sztv.com.cn/pindao/index.html?id=7868');
+    curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36');
     $data = curl_exec($ch);
+
     curl_close($ch);
     return $data;
 }
 
-function pathname($e)
-{
-    date_default_timezone_set('Asia/Shanghai');
-    $o = strtotime('today')*1000;
+// 获取密钥
+function get_key($url, $params) {
+    return json_decode(curl_get($url, $params), true);
+}
 
+// Base64 解码逻辑
+function ba($a) {
+    return base64_decode(implode('', array_reverse(str_split(substr($a, strlen($a) / 2) . substr($a, 0, strlen($a) / 2)))));
+}
 
-    $a=0;
-    $r=0;
-    $d=-1;
-    $p=0;
-    $l=0;
+// 获取 m3u8 文件内容
+function get_m3u8_content($live_id, $cdn_id) {
+    $live_key = ba(get_key('https://hls-api.sztv.com.cn/getCutvHlsLiveKey', [
+        't' => time(),
+        'id' => $live_id,
+        'token' => md5(time() . $live_id . 'cutvLiveStream|Dream2017'),
+        'at' => '1'
+    ]));
+//    echo '$live_key: '.$live_key;
+//    exit;
+   
+    $cdn_key = get_key('https://sttv2-api.sztv.com.cn/api/getCDNkey.php', [
+        'domain' => 'sztv-live.sztv.com.cn',
+        'page' => 'https://www.sztv.com.cn/pindao/index.html?id=' . $cdn_id,
+        'token' => md5('iYKkRHlmUanQGaNMIJziWOkNsztv-live.sztv.com.cn' . time() * 1000),
+        't' => time() * 1000
+    ])['key'];
+//    echo 'ck: '.$cdn_key;
+//    echo 'shit.';
+//    print_r($cdn_key);
+//    exit;
+    if (!$cdn_key)
+        $cdn_key = 'ejow6p6p6hmrm9g96beh2knecdq5kyv9bp0zxyg7';
 
-    for($a=0;$a<strlen($e);$a++)
-    {
-        $p = ord($e[$a]);
-        $r = $r + $p;
-        if($d!=-1)
-        {
-            $l=$l+($d-$p);
-        }
-        $d = $p;
-    }
+    $t = dechex(time());
+    $sign = md5("$cdn_key/$live_id/500/$live_key.m3u8$t");
+    $url = "https://sztv-live.sztv.com.cn/$live_id/500/$live_key.m3u8?sign=$sign&t=$t";
 
-    $r = $r + $l;
-    $s = base_convert($r,10,36);
-    $c = base_convert($o,10,36);
-    $u = 0;
-    for($a=0;$a<strlen($c);$a++)
-    {
-        $u = $u + ord($c[$a]);
-    }
+//    return preg_replace_callback('/(\d{13})(\/\d+\.ts)/', function ($matches) use ($live_id) {
+//        return "https://sztv-live.sztv.com.cn/$live_id/500/{$matches[1]}{$matches[2]}";
+//    }, curl_get($url));
 
-
-    $c = substr($c, 5) . substr($c, 0, 5);
-    $f = abs($u - $r);
-    $c = strrev($s) . $c;
-    $g = substr($c,0,4);
-    $w = substr($c,4);
-    $b = date('w') % 2;
-
-
-    $m = [];
-
-    for ($a = 0; $a < strlen($e); $a++) {
-
-        if ($a % 2 == $b) {
-            $index = $a % strlen($c);
-            $m[] = $c[$index];
-        } else {
-            $hIndex = $a - 1;
-            if ($hIndex >= 0 ) {
-                $h = $e[$hIndex];
-                $v = strpos($g, $h);
-                if ($v === false) {
-                    $m[] = $h;
-                } else {
-                    $m[] = $w[$v];
-                }
-            } else {
-                $gIndex = $a % strlen($g);
-                $m[] = $g[$gIndex];
-            }
-        }
-
-    }
-    $result = strrev(base_convert($f, 10, 36)) . implode('', $m);
-    $result = substr($result, 0, strlen($e));
-    return $result;
+    $php = "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+    $burl = "https://sztv-live.sztv.com.cn/$live_id/500/";
+    $left = "$php?ts=$burl";
+    $data = curl_get($url);
+    $data = preg_replace("/(.+\.ts)/i", $left."$1", $data);
+    return $data;
 }
 
 
 
-
 /*
-深圳卫视4K,sz.php?channel=%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%864K
-深圳卫视,sz.php?channel=%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86
-深圳都市频道,sz.php?channel=%E6%B7%B1%E5%9C%B3%E9%83%BD%E5%B8%82
-深圳电视剧频道,sz.php?channel=%E6%B7%B1%E5%9C%B3%E7%94%B5%E8%A7%86%E5%89%A7
-深圳财经频道,sz.php?channel=%E6%B7%B1%E5%9C%B3%E8%B4%A2%E7%BB%8F
-深圳少儿频道,sz.php?channel=%E6%B7%B1%E5%9C%B3%E5%B0%91%E5%84%BF
-深圳移动电视,sz.php?channel=%E6%B7%B1%E5%9C%B3%E7%A7%BB%E5%8A%A8
-深圳宜和购物频道,sz.php?channel=%E5%AE%9C%E5%92%8C%E8%B4%AD%E7%89%A9
-深圳国际频道,sz.php?channel=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85
+深圳卫视4K,sz.php?id=szws4k
+深圳卫视,sz.php?id=szws
+深圳都市频道,sz.php?id=szds
+深圳电视剧频道,sz.php?id=szdsj
+深圳财经频道,sz.php?id=szcj
+深圳少儿频道,sz.php?id=szse
+深圳移动电视,sz.php?id=szyd
+深圳宜和购物频道,sz.php?id=szyh
+深圳国际频道,sz.php?id=szgj
 */
