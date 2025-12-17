@@ -17,7 +17,7 @@ $sign = md5(md5("Api-Version=v1&channel_id={$n[$id]}&nonce={$nonce}&platform=and
 $h = [
     "api-version: v1",
     "nonce:".$nonce,
-    "m-uuid: D-8XPI8xaE6RMX4NZsu3e",
+    "m-uuid: 2317c7cbca1543851bbeff55aed1d77b2",
     "platform:android",
     "version:7.1.14",
     "timestamp:".$t,
