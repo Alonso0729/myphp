@@ -164,9 +164,14 @@ $n = [
     'ch8' => 'CH8',
     'asam' => '澳视澳门',
     'hoy77' => 'HOY77'
+	'jcjj' => '睛彩竞技',
+	'jclq' => '睛彩篮球',
+	'jcqs' => '睛彩青少',
+	'jcgcw' => '睛彩广场舞'
 ];
 $targetId =$n[$id];
-$m3u8Content =@file_get_contents('https://bc.188766.xyz/?ip=');
+//$m3u8Content =@file_get_contents('https://bc.188766.xyz/?ip=');
+$m3u8Content =@file_get_contents('https://bc.188766.xyz/?url=https://live.ottiptv.cc&mishitong=true&mima=mianfeibuhuaqian');
 $channels = preg_split('/\r\n|\r|\n/', $m3u8Content);
 array_shift($channels);
 $liveUrl = '';
