@@ -174,7 +174,7 @@ $n = [
 ];
 $targetId =$n[$id];
 //$m3u8Content =@file_get_contents('https://bc.188766.xyz/?ip=');
-$m3u8Content =@file_get_contents('https://bc.188766.xyz/?url=https://live.ottiptv.cc&mishitong=true&mima=mianfeibuhuaqian');
+$m3u8Content =@file_get_contents('https://bc.188766.xyz/?url=https://live.ottiptv.cc&mishitong=true&mima=bingcha1130');
 $channels = preg_split('/\r\n|\r|\n/', $m3u8Content);
 array_shift($channels);
 $liveUrl = '';
