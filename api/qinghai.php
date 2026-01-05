@@ -2,12 +2,13 @@
 error_reporting(0);
 $id = $_GET['id'];
 $n = [
-    "qhws" => ["786181204964564992"], //青海卫视
-    "qhjs" => ["786227316454875136"], //青海经视
-    "qhds" => ["786227009616371712"], //青海都市
+    "qhws" => ["786181204964564992", "32a2c3b4f1b52c58119457d44acdcd49", 1075], //青海卫视
+    "qhjs" => ["786227316454875136", "32a2c3b4f1b52c58119457d44acdcd49", 1075], //青海经视
+    "qhds" => ["786227009616371712", "32a2c3b4f1b52c58119457d44acdcd49", 1075], //青海都市
+    "adws" => ["824587377543962624", "069486993db4acc22c846557c8880d9a", 1077], //安多卫视
 ];
 
-$apiUrl = "https://mapi.qhbtv.com.cn/cloudlive-manage-mapi/api/topic/detail?preview=&id=".$n[$id][0]."&app_secret=32a2c3b4f1b52c58119457d44acdcd49&tenant_id=0&company_id=1075&lang_type=zh";
+$apiUrl = "https://mapi.qhbtv.com.cn/cloudlive-manage-mapi/api/topic/detail?preview=&id=".$n[$id][0]."&app_secret=".$n[$id][1]."&tenant_id=0&company_id=".$n[$id][2]."&lang_type=zh";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $apiUrl);
