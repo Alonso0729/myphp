@@ -28,7 +28,7 @@ class LiveStream {
         
         // 获取参数 - 使用标准查询参数格式
         $huyaId = isset($_GET['huya']) ? trim($_GET['huya']) : '';
-        $douyuId = isset($_GET['douyu']) ? trim($_GET['douyu']) : '';
+        //$douyuId = isset($_GET['douyu']) ? trim($_GET['douyu']) : '';
         $media = isset($_GET['media']) ? trim($_GET['media']) : 'flv';
         
         // 检查参数冲突
@@ -50,6 +50,7 @@ class LiveStream {
         }
         
         // 处理斗鱼请求
+		/*
         if ($douyuId) {
             $result = $this->goDouyu($douyuId);
             
@@ -61,6 +62,7 @@ class LiveStream {
             
             return $this->returnJson($result);
         }
+		*/
         
         // 没有提供房间号
         return $this->returnError('请提供房间号，使用格式：?huya=房间号 或 ?douyu=房间号');
@@ -184,7 +186,7 @@ class LiveStream {
             'cdn_line' => $n_rand
         ];
     }
-    
+   /* 
     private function goDouyu($id) {
         // 尝试多个斗鱼API接口
         $apis = [
@@ -242,6 +244,7 @@ class LiveStream {
             'room_id' => $id
         ];
     }
+	*/
     
     private function httpRequest($url, $method = 'GET', $data = null, $headers = []) {
         $ch = curl_init();
