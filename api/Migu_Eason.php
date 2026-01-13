@@ -628,7 +628,61 @@ $channels = [
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
         'http://hlsbkmgsplive.miguvideo.com/migu/kailu/wssj/51/20250915/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
-    ]
+    ],
+	'lnysj' => [ // 辽宁影视剧
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnysj/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnysj/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnysj/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnysj/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'lnsh' => [ // 辽宁生活
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnsh/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnsh/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnsh/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lnsh/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'lntyxx' => [ // 辽宁体育休闲
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lntyxx/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lntyxx/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lntyxx/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lntyxx/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'lngg' => [ // 辽宁公共
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lngg/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lngg/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lngg/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/lngg/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'xdm' => [ // 新动漫
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmxdm/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmxdm/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmxdm/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmxdm/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'nxwl' => [ // 宁夏文旅
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxwl/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxwl/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxwl/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxwl/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'nxjj' => [ // 宁夏经济
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxjj/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxjj/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxjj/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/nxjj/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'hnklcd' => [ // 湖南快乐垂钓
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmklcd/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmklcd/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmklcd/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmklcd/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+    ],
+    'hnc' => [ // 湖南茶频道
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmc/51/20251225/index.m3u8?&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmc/51/20251225/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmc/51/20251225/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=',
+        'http://hlsbkmgsplive.miguvideo.com/migu/kailu/ydcmc/51/20251225/01.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt='
+	]
 ];
 
 // 获取频道ID参数
