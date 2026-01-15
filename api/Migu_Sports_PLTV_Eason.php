@@ -383,6 +383,15 @@ $channels = [
         "http://[2409:8087:1e02:20::10]/PLTV/11/224/3221225684/1.m3u8?IASHttpSessionId="
     ],
 
+    // 咪视界-33 msj33
+    "msj33" => [
+        "http://[2409:8087:1e01:20::13]/PLTV/11/224/3221225689/1.m3u8?IASHttpSessionId=",
+		"http://[2409:8087:1e01:20::14]/PLTV/11/224/3221225689/1.m3u8?IASHttpSessionId=",
+		"http://[2409:8087:1e01:20::11]/PLTV/11/224/3221225689/1.m3u8?IASHttpSessionId=",
+		"http://[2409:8087:1e02:20::27]/PLTV/11/224/3221225689/1.m3u8?IASHttpSessionId=",
+		"http://[2409:8087:1e02:20::26]/PLTV/11/224/3221225689/1.m3u8?IASHttpSessionId="
+    ],
+
     // 至臻视界 zzsj
     "zzsj" => [
         "http://[2409:8087:1e01:20::11]/PLTV/11/224/3221225687/1.m3u8?IASHttpSessionId=",
