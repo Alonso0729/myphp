@@ -699,7 +699,7 @@ if (empty($channelId) || !isset($channels[$channelId])) {
     exit;
 }
 
-// 从该频道的四个地址中随机选择一个
+// 从该频道中随机选择一个
 $urls = $channels[$channelId];
 $randomIndex = array_rand($urls);
 $selectedUrl = $urls[$randomIndex];
