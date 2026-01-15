@@ -701,8 +701,18 @@ if (!isset($channels[$id])) {
 $list = $channels[$id];
 $url = $list[array_rand($list)];
 
-echo $url;
+$opts = [
+    "http" => [
+        "header" => "User-Agent: Mozilla/5.0\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+
+// 获取真实 m3u8 内容
+$m3u8 = file_get_contents($url, false, $context);
+
+// 输出给播放器
+header("Content-Type: application/vnd.apple.mpegurl");
+echo $m3u8;
 exit;
-
-
 ?>
