@@ -701,7 +701,8 @@ if (!isset($channels[$id])) {
 $list = $channels[$id];
 $url = $list[array_rand($list)];
 
-header("Location => $url");
-exit();
+echo $url;
+exit;
+
 
 ?>
