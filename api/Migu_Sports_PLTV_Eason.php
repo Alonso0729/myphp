@@ -26,8 +26,8 @@ $channels = [
         "http://[2409:8087:1e02:20::24]/PLTV/11/224/3221226116/1.m3u8?IASHttpSessionId="
     ],
 
-    // 睛彩篮球 jclk
-    "jclk" => [
+    // 睛彩篮球 jclq
+    "jclq" => [
         "http://[2409:8087:1e01:20::42]/PLTV/11/224/3221226118/1.m3u8?IASHttpSessionId=",
         "http://[2409:8087:1e01:20::16]/PLTV/11/224/3221226118/1.m3u8?IASHttpSessionId=",
         "http://[2409:8087:1e01:20::40]/PLTV/11/224/3221226118/1.m3u8?IASHttpSessionId=",
