@@ -421,20 +421,24 @@ $channels = [
 // 随机播放逻辑（无需修改）
 // ===============================
 
-$id = $_GET["id"] ?? "";
+// 获取频道ID参数
+$channelId = isset($_GET['id']) ? $_GET['id'] : '';
 
-if (!$id) {
-    die("缺少频道参数 id=");
+// 检查频道是否存在
+if (empty($channelId) || !isset($channels[$channelId])) {
+    // 返回错误信息或默认频道
+    header('HTTP/1.1 404 Not Found');
+    echo "频道不存在或参数错误";
+    exit;
 }
 
-if (!isset($channels[$id])) {
-    die("频道不存在: $id");
-}
+// 从该频道的四个地址中随机选择一个
+$urls = $channels[$channelId];
+$randomIndex = array_rand($urls);
+$selectedUrl = $urls[$randomIndex];
 
-$list = $channels[$id];
-$url = $list[array_rand($list)];
-
-header("Location: $url");
-exit();
+// 重定向到选中的播放地址
+header('Location: ' . $selectedUrl);
+exit;
 
 ?>
