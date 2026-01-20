@@ -23,7 +23,7 @@ $n = [
   $s= md5($path.'-'.$e.'-0-0-'.$key);
   $auth_key = $e.'-0-0-'.$s;
   //$arr = ['zwebl02','zwebl04','zwebl06'];
-  $arr = ['zwebl02','zwebl03'];
+  $arr = ['zwebl02'];
   $ip1 = $arr[array_rand($arr)];
   $playurl = "http://$ip1.cztv.com$path?auth_key=$auth_key";
   header('location:'.$playurl);
