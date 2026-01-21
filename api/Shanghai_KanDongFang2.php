@@ -3,7 +3,7 @@
 error_reporting(0);
 $id = isset($_GET['id'])?$_GET['id']:'dfws';
 $n = [
-'dfws' => 22, //东方卫视
+'dfws' => 2030, //东方卫视
 'xwzh' => 20, //上海新闻综合
 'xjs' => 1600, //新纪实
 'mdy' => 1601, //魔都眼
@@ -11,6 +11,7 @@ $n = [
 'dycj' => 21, //第一财经
 'ds' => 18, //上海都市
 'wxty' => 1605, //五星体育
+'ash' => 2029 //爱上海
 ];
 $url = "https://bp-api.bestv.cn/cms/api/live/channels";
 $post = '{}';
