@@ -4,7 +4,7 @@ $id = isset($_GET['id'])?$_GET['id']:'nmws';
 $t = isset($_GET['t'])?$_GET['t']:'hls';//m3u8 flv
 $n = [
      //内蒙古
-     'nmws' => 125, //内蒙古卫视
+     'nmws' => 262, //内蒙古卫视
      'nmmyws' => 126, //内蒙古蒙古语卫视
      'nmxwzh' => 127, //内蒙古新闻综合
      'nmjjsh' => 128, //内蒙古经济生活
